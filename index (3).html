@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<head>
+
+
+<style>
+
+#typing{
+    font-family:'Poppins', sans-serif;
+}
+
+</style>
+
+</head>
+
+<style>
+
+body {
+    background-image:url("Graduation (3).png");
+    margin:0;
+    background-size: cover;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    height:100vh;
+}
+
+#typing{
+
+    font-family:sans-serif;
+
+    color:aliceblue;
+
+    white-space:pre-wrap;
+
+    font-size:90px;
+
+    text-shadow:2px 2px 5px black;
+}
+
+#song-btn {
+
+    margin-top:40px;
+
+    background-color:palevioletred;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+
+    padding:15px 30px;
+
+    font-size:20px;
+
+    cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="typing"></div>
+
+<button id="song-btn"
+onclick="window.location.href='next.html'">
+
+There's A Message For U, Click Here!!
+
+</button>
+
+<script>
+
+const text = `Hai, Cia!`;
+
+let index = 0;
+
+function typing(){
+
+    if(index < text.length){
+
+        document.getElementById("typing").innerHTML += text.charAt(index);
+
+        index++;
+
+        setTimeout(typing,100);
+
+    }
+
+}
+
+typing();
+
+</script>
+
+</body>
+</html>

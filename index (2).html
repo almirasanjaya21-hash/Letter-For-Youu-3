@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heart Animation</title>
+
+<style>
+    body{
+        margin:0;
+        background:black;
+        overflow:hidden;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+    }
+
+    canvas{
+        background:black;
+    }
+</style>
+</head>
+<body>
+
+<canvas id="heart"></canvas>
+
+<script>
+const canvas = document.getElementById("heart");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+ctx.translate(canvas.width / 2, canvas.height / 2);
+
+function hearta(k){
+    return 15 * Math.pow(Math.sin(k), 3);
+}
+
+function heartb(k){
+    return 12 * Math.cos(k)
+         - 5 * Math.cos(2 * k)
+         - 2 * Math.cos(3 * k)
+         - Math.cos(4 * k);
+}
+
+let i = 0;
+
+function draw(){
+    
+    ctx.strokeStyle = "red";
+    ctx.lineWidth = 2;
+
+    let x = hearta(i) * 20;
+    let y = -heartb(i) * 20;
+
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(x, y);
+    ctx.stroke();
+
+    i += 0.05;
+
+    if(i < 100){
+        requestAnimationFrame(draw);
+    }
+}
+
+draw();
+</script>
+
+</body>
+</html>

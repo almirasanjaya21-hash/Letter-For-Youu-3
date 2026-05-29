@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(137, 183, 223);   
+}
+
+.page{
+display: none;
+}
+
+#page1{
+    display:block;
+}
+
+
+.entername {
+     position: absolute;
+  bottom: 140px;
+left: 640px;
+  width: 200px;
+  background-color: palevioletred;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:20px;
+}
+
+.placeholder {
+    text-align: center;
+}
+
+.love-btn {
+    padding: 20px;
+    position: absolute;
+  bottom: 65px;
+left: 650px;
+  width: 270px;
+  font-family: sans-serif;
+}
+
+.btn {
+    padding: 20px;
+    position: absolute;
+  bottom: 65px;
+left: 650px;
+  width: 270px;
+  
+}
+

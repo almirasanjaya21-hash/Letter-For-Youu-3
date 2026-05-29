@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+    background-image:url("Graduation (2).jpg");
+    margin:0;
+    background-size: cover;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    height:100vh;
+}
+
+
+
+#typing{
+
+    margin-top:80px;
+    max-width: 1015px;
+
+    padding: 20px;
+
+    margin-left: 40px;
+    text-align: center;
+    display:flex;
+
+
+    line-height: 1.2;;
+
+    font-size:29px;
+    color:rgb(64, 71, 95);
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgb(119, 109, 109);
+
+    font-family:sans-serif;
+
+    white-space:pre-wrap;
+}
+
+/* tombol awalnya hilang */
+#btn{
+
+    display:none;
+
+    margin-top:40px;
+
+    background-color: palevioletred;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+
+    padding:15px 30px;
+
+    font-size:20px;
+
+    cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="typing"></div>
+
+<button id="btn"
+onclick="window.location.href='index (2).html'">
+
+Click Here!!
+
+</button>
+
+<script>
+
+const text = `Dia nih keren bngt leadership nya oke bngt, pubspeak nya mantap, pede nya apalagi, cantik juga, minus nya kurang waras aja memang. wkwkwkwk, kalau ada yg jahatin ko blg yh, terbang nnti aku dri jawa ke kepri. SMA nnti reach all your dreams yaa dir? Honestly it's really weird to mention SMA in our conversation cause i always though we still have one or two years again in jhs.. PASTI BISAAA KOK, my prays, wishes and hopes will always be with you. OH IYAA, jaga kesehatan yaa! JANGAN KECAPEAN, jangan selalu nanggung semua nya sendiri cause u will have a good person around you! Bahagia terus yaa Anak Hebat 🤍.
+`;
+
+let index = 0;
+
+function typing(){
+
+    if(index < text.length){
+
+        document.getElementById("typing").innerHTML += text.charAt(index);
+
+        index++;
+
+        setTimeout(typing, 40);
+
+    }else{
+
+        // tombol muncul
+        document.getElementById("btn").style.display = "block";
+
+    }
+
+}
+
+typing();
+
+</script>
+
+</body>
+</html>
